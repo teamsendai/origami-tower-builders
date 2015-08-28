@@ -33,7 +33,8 @@
         //プレロード
         img_array = [];
         for (var i = 1; i <= 240; i++){
-            img_array.push('./assets/seq' + i + '.gif');
+            var j = ("000" + i).substr(-4);
+            img_array.push('./assets/seq/' + j + '.gif');
         }
         pl_file = new Array();
         for (i=0; i<img_array.length; i++){
