@@ -68,3 +68,12 @@
 #fig-2B img{
     margin-bottom: 5px;
 }
+
+
+.linkfile{
+    
+}
+.linkfile:hover{
+    text-decoration: underline;
+}
+    

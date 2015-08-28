@@ -1,0 +1,98 @@
+clear
+
+S0=1e-4
+Si=7e-5
+R=8.3144598e-3
+T=300
+dG=-30
+kf=5e2
+kr1=kf*exp(dG/R/T)
+kr2=kf*exp(dG/2/R/T)
+ks=4.2e2
+kbf=5e2
+kbr=5e2
+
+t0=0
+t=t0:0.01:60*30
+s0=[S0;Si;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0]
+
+function sfunc = sdot(t,s)
+
+sfunc(1) = -kf*s(6)*s(1) +kr1*s(7) -kf*s(6)*s(1) +kr2*s(9) -kf*s(6)*s(1) +kr2*s(11) -kf*s(6)*s(1) +kr1*s(13) -kf*s(1)*s(9) +kr2*s(19) -kf*s(1)*s(11) +kr2*s(19) -kf*s(1)*s(12) +kr2*s(20) -kf*s(1)*s(10) +kr2*s(21) -kf*s(1)*s(17) +kr2*s(23) -kf*s(1)*s(18) +kr2*s(24) -kf*s(1)*s(15) +kr2*s(27) -kf*s(1)*s(16)-kr2*s(29)-ks*s(1)*s(2) 
+
+sfunc(2) = -ks*s(1)*s(2)
+
+sfunc(3) = -kf*s(6)*s(3) +kr1*s(8) -kf*s(6)*s(3) +kr2*s(10) -kf*s(6)*s(3) +kr2*s(12) -kf*s(6)*s(3) +kr1*s(14) -kf*s(3)*s(9) +kr2*s(20) -kf*s(3)*s(11) +kr2*s(21) -kf*s(3)*s(10) +kr2*s(22) -kf*s(3)*s(12) +kr2*s(22) -kf*s(3)*s(17) +kr2*s(25) -kf*s(3)*s(18) +kr2*s(26) -kf*s(3)*s(15) +kr2*s(28) -kf*s(3)*s(16) +kr2*s(30)-kbf*s(3)+kbr*s(6)+ks*s(1)*s(2)
+
+sfunc(4) = ks*s(1)*s(2)
+
+sfunc(5) = ks*s(1)*s(2)
+
+sfunc(6) = -kf*s(6)*s(1) +kr1*s(7) -kf*s(6)*s(3) +kr1*s(8) -kf*s(6)*s(1) +kr2*s(9) -kf*s(6)*s(3) +kr2*s(10) -kf*s(6)*s(1) +kr2*s(11) -kf*s(6)*s(3) +kr2*s(12) -kf*s(6)*s(1) +kr1*s(13) -kf*s(6)*s(3) +kr1*s(14) -kf*s(6)*s(9) +kr1*s(15) -kf*s(6)*s(7) +kr2*s(15) -kf*s(6)*s(10) +kr1*s(16) -kf*s(6)*s(8) +kr2*s(16) -kf*s(6)*s(11) +kr1*s(17) -kf*s(6)*s(13) +kr2*s(17) -kf*s(6)*s(12) +kr1*s(18) -kf*s(6)*s(14) +kr2*s(18) -kf*s(6)*s(19) +kr1*s(23) -kf*s(6)*s(20) +kr1*s(24) -kf*s(6)*s(21) +kr1*s(25) -kf*s(6)*s(22) +kr1*s(26) -kf*s(6)*s(19) +kr1*s(27) -kf*s(6)*s(20) +kr1*s(28) -kf*s(6)*s(21) +kr1*s(29) -kf*s(6)*s(22) +kr1*s(30) -kf*s(6)*s(23) +kr1*s(31) -kf*s(6)*s(27) +kr1*s(31) -kf*s(6)*s(28) +kr1*s(32) -kf*s(6)*s(24) +kr1*s(32) -kf*s(6)*s(25) +kr1*s(33) -kf*s(6)*s(29) +kr1*s(33) -kf*s(6)*s(30) +kr1*s(34) -kf*s(6)*s(26) +kr1*s(34) +kbf*s(3)-kbr*s(6)
+
+sfunc(7) = +kf*s(6)*s(1) -kr1*s(7) -kf*s(6)*s(7) +kr2*s(15) -kf*s(11)*s(7) +kr2*s(27) -kf*s(12)*s(7) +kr2*s(28) -kf*s(7)*s(17) +kr2*s(31) -kf*s(18)*s(7) +kr2*s(32) 
+
+sfunc(8) = +kf*s(6)*s(3) -kr1*s(8) -kf*s(6)*s(8) +kr2*s(16) -kf*s(11)*s(8) +kr2*s(29) -kf*s(12)*s(8) +kr2*s(30) -kf*s(8)*s(17) +kr2*s(33) -kf*s(8)*s(18) +kr2*s(34) 
+
+sfunc(9) = +kf*s(6)*s(1) -kr2*s(9) -kf*s(6)*s(9) +kr1*s(15) -kf*s(1)*s(9) +kr2*s(19) -kf*s(3)*s(9) +kr2*s(20) -kf*s(9)*s(13) +kr2*s(23) -kf*s(14)*s(9) +kr2*s(24) 
+
+sfunc(10) = +kf*s(6)*s(3) -kr2*s(10) -kf*s(6)*s(10) +kr1*s(16) -kf*s(1)*s(10) +kr2*s(21) -kf*s(3)*s(10) +kr2*s(22) -kf*s(10)*s(13) +kr2*s(25) -kf*s(10)*s(14) +kr2*s(26) 
+
+sfunc(11) = +kf*s(6)*s(1) -kr2*s(11) -kf*s(6)*s(11) +kr1*s(17) -kf*s(1)*s(11) +kr2*s(19) -kf*s(3)*s(11) +kr2*s(21) -kf*s(11)*s(7) +kr2*s(27) -kf*s(11)*s(8) +kr2*s(29) 
+
+sfunc(12) = +kf*s(6)*s(3) -kr2*s(12) -kf*s(6)*s(12) +kr1*s(18) -kf*s(1)*s(12) +kr2*s(20) -kf*s(3)*s(12) +kr2*s(22) -kf*s(12)*s(7) +kr2*s(28) -kf*s(12)*s(8) +kr2*s(30) 
+
+sfunc(13) = +kf*s(6)*s(1) -kr1*s(13) -kf*s(6)*s(13) +kr2*s(17) -kf*s(9)*s(13) +kr2*s(23) -kf*s(10)*s(13) +kr2*s(25) -kf*s(13)*s(15) +kr2*s(31) -kf*s(13)*s(16) +kr2*s(33) 
+
+sfunc(14) = +kf*s(6)*s(3) -kr1*s(14) -kf*s(6)*s(14) +kr2*s(18) -kf*s(14)*s(9) +kr2*s(24) -kf*s(10)*s(14) +kr2*s(26) -kf*s(14)*s(15) +kr2*s(32) -kf*s(16)*s(14) +kr2*s(34)
+
+sfunc(15) = +kf*s(6)*s(9) -kr1*s(15) +kf*s(6)*s(7) -kr2*s(15) -kf*s(1)*s(15) +kr2*s(27) -kf*s(3)*s(15) +kr2*s(28) -kf*s(13)*s(15) +kr2*s(31) -kf*s(14)*s(15) +kr2*s(32) 
+
+sfunc(16) = +kf*s(6)*s(10) -kr1*s(16) +kf*s(6)*s(8) -kr2*s(16) -kf*s(1)*s(16) +kr2*s(29) -kf*s(3)*s(16) +kr2*s(30) -kf*s(13)*s(16) +kr2*s(33) -kf*s(16)*s(14) +kr2*s(34)
+
+sfunc(17) = +kf*s(6)*s(11) -kr1*s(17) +kf*s(6)*s(13) -kr2*s(17) -kf*s(1)*s(17) +kr2*s(23) -kf*s(3)*s(17) +kr2*s(25) -kf*s(7)*s(17) +kr2*s(31) -kf*s(8)*s(17) +kr2*s(33) 
+
+sfunc(18) = +kf*s(6)*s(12) -kr1*s(18) +kf*s(6)*s(14) -kr2*s(18) -kf*s(1)*s(18) +kr2*s(24) -kf*s(3)*s(18) +kr2*s(26) -kf*s(18)*s(7) +kr2*s(32) -kf*s(8)*s(18) +kr2*s(34) 
+
+sfunc(19) = +kf*s(1)*s(9) -kr2*s(19) +kf*s(1)*s(11) -kr2*s(19) -kf*s(6)*s(19) +kr1*s(23) -kf*s(6)*s(19) +kr1*s(27) 
+
+sfunc(20) = +kf*s(1)*s(12) -kr2*s(20) +kf*s(3)*s(9) -kr2*s(20) -kf*s(6)*s(20) +kr1*s(24) -kf*s(6)*s(20) +kr1*s(28) 
+
+sfunc(21) = +kf*s(1)*s(10) -kr2*s(21) +kf*s(3)*s(11) -kr2*s(21) -kf*s(6)*s(21) +kr1*s(25) -kf*s(6)*s(21) +kr1*s(29) 
+
+sfunc(22) = +kf*s(3)*s(10) -kr2*s(22) +kf*s(3)*s(12) -kr2*s(22) -kf*s(6)*s(22) +kr1*s(26) -kf*s(6)*s(22) +kr1*s(30) 
+
+sfunc(23) = +kf*s(6)*s(19) -kr1*s(23) +kf*s(9)*s(13) -kr2*s(23) +kf*s(1)*s(17) -kr2*s(23) -kf*s(6)*s(23) +kr1*s(31) 
+
+sfunc(24) = +kf*s(6)*s(20) -kr1*s(24) +kf*s(1)*s(18) -kr2*s(24) +kf*s(14)*s(9) -kr2*s(24) -kf*s(6)*s(24) +kr1*s(32) 
+
+sfunc(25) = +kf*s(6)*s(21) -kr1*s(25) +kf*s(3)*s(17) -kr2*s(25) +kf*s(10)*s(13) -kr2*s(25) -kf*s(6)*s(25) +kr1*s(33) 
+
+sfunc(26) = +kf*s(3)*s(18) -kr2*s(26) +kf*s(10)*s(14) -kr2*s(26) +kf*s(6)*s(22) -kr1*s(26) -kf*s(6)*s(26) +kr1*s(34) 
+
+sfunc(27) = +kf*s(6)*s(19) -kr1*s(27) +kf*s(11)*s(7) -kr2*s(27) +kf*s(1)*s(15) -kr2*s(27) -kf*s(6)*s(27) +kr1*s(31) 
+
+sfunc(28) = +kf*s(6)*s(20) -kr1*s(28) +kf*s(3)*s(15) -kr2*s(28) +kf*s(12)*s(7) -kr2*s(28) -kf*s(6)*s(28) +kr1*s(32) 
+
+sfunc(29) = +kf*s(6)*s(21) -kr1*s(29) +kf*s(1)*s(16) -kr2*s(29) +kf*s(11)*s(8) -kr2*s(29) -kf*s(6)*s(29) +kr1*s(33) 
+
+sfunc(30) = +kf*s(6)*s(22) -kr1*s(30) +kf*s(12)*s(8) -kr2*s(30) +kf*s(3)*s(16) -kr2*s(30) -kf*s(6)*s(30) +kr1*s(34) 
+
+sfunc(31) = +kf*s(6)*s(23) -kr1*s(31) +kf*s(6)*s(27) -kr1*s(31) +kf*s(13)*s(15) -kr2*s(31) +kf*s(7)*s(17) -kr2*s(31) 
+
+sfunc(32) = +kf*s(6)*s(28) -kr1*s(32) +kf*s(6)*s(24) -kr1*s(32) +kf*s(14)*s(15) -kr2*s(32) +kf*s(18)*s(7) -kr2*s(32) 
+
+sfunc(33) = +kf*s(6)*s(25) -kr1*s(33) +kf*s(6)*s(29) -kr1*s(33) +kf*s(8)*s(17) -kr2*s(33) +kf*s(13)*s(16) -kr2*s(33) 
+
+sfunc(34) = +kf*s(6)*s(30) -kr1*s(34) +kf*s(6)*s(26) -kr1*s(34) +kf*s(8)*s(18) -kr2*s(34) +kf*s(16)*s(14) -kr2*s(34)
+
+
+endfunction
+
+s=ode("stiff",s0,t0,t,sdot)
+
+plot2d(t,s(31,:)+s(32,:)+s(33,:)+s(34,:),5)
+
+
+
+ //1:blac,2:blue,3:green,4:light blue,5:red,6:purple,7:yello,8:white,9:Deep bluestacksize('max')
