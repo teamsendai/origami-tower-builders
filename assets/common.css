@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 *{
     box-sizing: border-box;
@@ -186,7 +186,7 @@ a{
 #hero-content {
     height: 460px;
     background-color: #316679;
-    background-image: url("./hero.png");
+    background-image: url("./top1.png");
     background-size: cover;
     background-position: center;
 }
