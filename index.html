@@ -80,8 +80,8 @@
                 <div class="section stripe-dark">
                     <div class="section-container">
                         <p>Our goal is to manufacture DNA nanostructures with desired size by using DNA origami technology. Shape-complementary interfaces on DNA origami enables us to stack DNA origami blocks to form a large-scale polymeric object, however, the number of stacking is still difficult to be controlled.</p> 
-                        <p>Here we show that through designing the configuration and arrangement on protrusions and recessions of DNA origami surface, the number of stacking origami monomers can be precisely controlled.</p>
-                        <p>We designed an origami which has an ability to transform its shape triggered by an input of single-stranded DNA. When we add the input, initial shape (Shape C) is changed into another shape with different width/height(Shape O).Owing to the shape- complementary interfaces, only the combination of Shape C and Shape O can stack with each other. Based on the principle of least common multiple, the stacking procedure continues until the width/height becomes identical. Moreover, by adjusting the width/height ratio between Shape C and Shape O, it is possible to realize DNA nanostructures with designated size made of one kind of monomers.</p>
+                        <p>Here we show that through designing the configuration and arrangement on protrusions and recessions of DNA origami surface, the number of stacking origami blocks can be precisely controlled.</p>
+                        <p>We designed an origami which has an ability to transform its shape triggered by an input of single-stranded DNA. When we add the input, initial shape (Shape C) is changed into another shape with different width/height(Shape O).Owing to the shape- complementary interfaces, only the combination of Shape C and Shape O can stack with each other. Based on the principle of least common multiple, the stacking procedure continues until the width/height becomes identical. Moreover, by adjusting the width/height ratio between Shape C and Shape O, it is possible to realize DNA nanostructures with designated size made of one kind of blocks.</p>
                         <p>We anticipate our design to be a starting point to make micro-scale DNA nanostructures. For example, the cytoskeleton for artificial cell, the body of molecular robots and the base of nano chemical factory could be manufactured. Furthermore, combining our method with DNA computing could provide a brand-new possibility for molecular robotics.</p>
                     </div>
                 </div>
@@ -104,31 +104,31 @@
                 <div class="section stripe-green">
                     <div class="section-container">
                         <h2>Purpose</h2>
-                        <p>The purpose of our project is to create structures with designated size by stacking only one kind of DNA origami blocks in a controllable way. DNA origami technology enables us to make various nanoscale structures on the basis of shape-complementary interfaces. However, the maximum size of DNA origami is about 100 nm due to the length restriction of the scaffold, and the number of stacking among them cannot be controlled. By conventional approach, to create structures by stacking N DNA origami blocks (N = 2, 3 …), we need N-kind of origami with different connectors, which would make it difficult to design the blocks properly.</p>
+                        <p>DNA origami technology enables us to make various nanoscale structures [3]. However, the maximum size of DNA origami is limited to 100 nm due to the length of the scaffold. Although DNA origami could stack together on the basis of the shape-complementary interfaces, the number of stacking cannot be controlled [1]. In order to create large structures by stacking DNA origami blocks, we need many kinds of origami with different connectors. The purpose of our project is to create structures with designated size by stacking only one kind of DNA origami blocks in a controllable way.</p>
                     </div>
                 </div>
                 <div class="section">
                     <div class="section-container">
                         <h2>Idea</h2>
-                        <p> To achieve the purpose, we proposed a new method to control the number of stacking origami blocks. In this method, a shape-complementary interface with arrangement of the orientation of protrusions and recessions on both sides is designed. By adjusting the length/width ratio of the origami blocks, the stacking procedure could stop at a specified height in accordance with the principle of least common multiple. Furthermore, the origami blocks have abilities to transform from closed state to open state, providing the possibility to use only one kind of blocks to build polymeric origami blocks like a tower and avoid the improper stacking effectively.</p>
+                        <p> To achieve the purpose, we proposed a new method to control the number of stacking origami blocks. In this method, a shape-complementary interface with protrusions and recessions on both sides is designed. By adjusting the length/width ratio of the origami blocks, the stacking procedure could stop at a specified height in accordance with the principle of least common multiple. Furthermore, the origami blocks have abilities to transform from closed state to open state, providing the possibility to use only one kind of block to build origami architecture like a tower, while avoiding the improper stockings.</p>
                     </div>
                 </div>
                 <div class="section stripe-green">
                     <div class="section-container">
                         <h2>Procedure</h2>
-                        We realize the goal by 3 steps.
+                        Our approach consists of the following 3 steps.
                         <div>
                             <h3>Step1: Design</h3>
                             <ol>
-                                <li>The shape-complementary interface of DNA origami blocks is designed by caDNAno2, its thermodynamic stability is simulated by CanDo and its property of molecular dynamics is simulated by oxDNA.</li>
-                                <li>The opening/closing mechanism to control the activation of the origami block is designed by Sequence Design, and then use NUPACK to confirm the desired strand displacement reaction.</li>
+                                <li>The shape-complementary interface of DNA origami blocks is designed by caDNAno2. The thermodynamic stability of the DNA origami is simulated by CanDo. Its molecular dynamic property is simulated by oxDNA.</li>
+                                <li>2.	The opening/closing mechanism to control the activation of the origami block is designed by Sequence Design, and NUPACK is to confirm the desired strand displacement reaction.</li>
                             </ol>
                         </div>
                         <div>
                             <h3>Step2: Simulation</h3>
                             <ol>
-                                <li>Formalize a mathematical model for stacking reactions by reaction kinetics.</li>
-                                <li>Predict the behavior of the model by Scilab.</li>
+                                <li>A mathematical model for stacking reactions by reaction kinetics is formalized.</li>
+                                <li>The behavior of the model is predicted by Scilab.</li>
                             </ol>
                         </div>
                         <div>
@@ -202,6 +202,12 @@
                 <div class="section stripe-green">
                     <div class="section-container">
                         <h1>Discussion</h1>
+                        <h2>Comparison with other approaches</h2>
+                        Compared with existing method (Table 1), the proposed method enables us to build large structures using homogeneous monomers. By arranging the orientation of protrusions and recessions on the surface and adjusting the length/width ratio of DNA origami blocks, we can make various structures with specified size by self-assembly.<p>
+                        
+                        <h2>Significance</h2>
+                        The entire biological world can be regarded as a huge hierarchical system composed of homogeneous and heterogeneous layers [4]. The homogeneous layer is able to form the heterogeneous layer with many homogeneous components of various sizes and complexities, such as cells form various tissues and organs. <p>
+                        Inspired by this self-organizing hierarchy, we propose a novel method to make DNA Nano structures with designated size using homogeneous monomers. The method proposed here enables us to make large-scale complex nanostructures. By adjusting the length/width ratio of the blocks we designed, beams with various length and boards with various areas can be manufactured, which can be used to build complex micro-scale structures. Furthermore, if we combine the blocks with DNA computing devices and molecular motor, molecular computers and molecular robots can be made. And if we put various kinds of cells into the structures made of the designed blocks, biological application like artificial organs could be anticipated.
                     </div>
                 </div>
                 <div class="section">
