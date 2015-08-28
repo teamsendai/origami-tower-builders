@@ -177,12 +177,17 @@ a{
 .subtitle{
     position: absolute;
     color: #002e5c;
-    top: 30px;
+    top: 100px;
     left: 30px;
     font-weight: 300;
-    font-size: 36pt;
+    font-size: 48px;
     letter-spacing: -0.02em;
+     text-shadow: 2px 2px 1px #eee,
+    -2px 2px 1px #eee,
+    2px -2px 1px #eee,
+    -2px -2px 1px #eee;
 }
+
 #hero-content {
     height: 460px;
     background-color: #316679;
