@@ -1,6 +1,6 @@
 #fig4-1{
     width:100%;
-    width: auto;
+    height: auto;
     margin-bottom: 50px;
 }
 #fig4-1 img{
@@ -8,14 +8,14 @@
 }
 #fig4-2{
     width:100%;
-    width: auto;
+    height: auto;
 }
 #fig4-2 img{
     width: 100%;
 }
 #fig4-3{
     width:100%;
-    width: auto;
+    height: auto;
     margin-bottom: 50px;
 }
 #fig4-3 img{
@@ -24,7 +24,7 @@
 
 #fig5-1{
     width:100%;
-    width: auto;
+    height: auto;
 }
 #fig5-1 img{
     width: 100%;
@@ -33,4 +33,29 @@
 #project-title{
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+
+#fig3-1{
+    width: 100%;
+    height: auto;
+    
+    
+}
+#fig3-1 img{
+    width: 100%;
+    
+}
+
+#fig3-2{
+    width: 100%;
+    height: auto;
+}
+#fig3-2 img{
+    width: 100%;
+    
+}
+#k-container{
+    margin: 0 auto;
+    text-align: center;
 }
