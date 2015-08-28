@@ -113,7 +113,7 @@
                         <div>
                             <h3>Step3: Experiment</h3>
                             <ol>
-                                <li>Origami preparation: make DNA origami with strands of opening/closing mechanism</li>
+                                <li>Origami preparation: Make DNA origami with strands of opening/closing mechanism</li>
                                 <li>Poly-Agarose Gel Electrophoresis: Verify the behavior of opening/closing mechanism.</li>
                                 <li>Observation by Atomic Force Microscope: Verify the shape of DNA origami blocks, the transformation from open state to closed state, and the stacking procedure.</li>
                             </ol>
@@ -141,10 +141,10 @@
                         
                         <figure id="fig-1">
                             <img src="./assets/fig-1.png" width="400px">
-                            <figcaption>Fig.2-1</figcaption>
+                            <figcaption>Fig.2-1 Origami Architecture by 5 blocks</figcaption>
                         </figure>
                         
-                         <p>The brock is composed of two components that are connected by a hinge. The hinge provides the brock two different states (open and close). (Fig.2-2A~2-2C).</p>
+                         <p>The block is composed of two components that are connected by a hinge. The hinge provides the block two different states (open and close). (Fig.2-2A~2-2C).</p>
 
                         
                         
@@ -178,42 +178,42 @@
                                 <p>displayMode: <span id ="showDisplayMode"></span></p>
                                 <p>blockOpened: <span id ="showBlockOpened"></span></p>
                             </div>
-                            <figcaption>Fig.2-2A</figcaption>
+                            <figcaption>Fig.2-2A Animation of the opening/closing mechanism</figcaption>
 
                         </figure>
                         
                         
                         <figure id="fig-2B">
                             <img src="./assets/caDNAno.png" width="400px">
-                            <figcaption>Fig.2-2B</figcaption>
+                            <figcaption>Fig.2-2B Design of Block by caDNAno2</figcaption>
                         </figure>
                         
                         <figure id="fig-2C">
                             <img src="./assets/cando_image_trimmed.png" width="400px">
-                            <figcaption>Fig.2-2C</figcaption>
+                            <figcaption>Fig.2-2C CanDo simulation image</figcaption>
                         </figure>
                         
                         
                         
-            <p>There is a report that DNA structure with protrusions and recessions can stack together [2]. Employing this mechanism, we designed brocks that have protrusions on obverse surface (Surface A) and recessions on reverse surface (Surface B). Moreover, nucleobase stacking interactions engage at the double-helical interfaces of the shape-complementary protrusions and recessions when the two domains are brought into contact, but only upon correct fit of helices and given correct helical orientation of the interfacial nucleobase pairs. Therefore, only Surface A of closed state and Surface B of open state has the ability to stack with each other (Fig.2-3).We designed the origami block by caDNAno2.[3]
+            <p>There is a report that DNA structure with protrusions and recessions can stack together [2]. Employing this mechanism, we designed blocks that have protrusions on obverse surface (Surface A) and recessions on reverse surface (Surface B). Moreover, nucleobase stacking interactions engage at the double-helical interfaces of the shape-complementary protrusions and recessions when the two domains are brought into contact, but only upon correct fit of helices and given correct helical orientation of the interfacial nucleobase pairs. Therefore, only Surface A of closed state and Surface B of open state have the ability to stack with each other (Fig.2-3).We designed the origami block by caDNAno2.[3]
 </p>
                     <figure id="fig-3">
                         <video src="./assets/fig-3.mp4" width="300px" autoplay loop></video>
-                        <figcaption>Fig.2-3</figcaption>
+                        <figcaption>Fig.2-3 Animation of stacking</figcaption>
                     </figure>
             
             <p>We also designed an opening/closing mechanism to realize the transformation from closed state to open state. In Fig. 2-4, we graft some single-stranded DNAs to the origami blocks. When we add the initial input of a single-stranded DNA, which has the complementary sequences to the ones grafted to the blocks, closed state transforms into open state due to the strand displacement reaction. Once the block becomes open state, it has the ability to activate the next closed block.
 </p>
   		<figure id="fig-4">
           <img src="./assets/fig-4.png" width="400px">
-                    <figcaption>Fig.2-4</figcaption>
+                    <figcaption>Fig.2-4 Activating mechanism</figcaption>
                         </figure>
             <p>We controlled the height of the tower, namely the number of stacking blocks, according to the principle of least common multiple (Fig.2-5). For example, if we intend to build a 6-story tower, we prepare an origami block which has two pairs of protrusions on Surface A and three pairs of recessions on Surface B. Through the opening/closing mechanism mentioned above, we could realize the situation where there are two closed blocks and three open blocks and the stacking procedure would stop when all the six pairs of protrusions and recessions combined with each other. Generally, we could build polymeric blocks with any designated height by changing the length-width ratio of the monomer blocks.
 </p>
 
                       <figure id="fig-5">
                         <video src="./assets/fig-5.mp4" width="300px" autoplay loop ></video>
-                        <figcaption>Fig.2-5</figcaption>
+                        <figcaption>Fig.2-5 Animation of polymerization</figcaption>
                       </figure>
                     </div>
                 </div>
@@ -226,15 +226,17 @@
                             <h1>Simulation</h1>
                         </div>
                     <div class="section-container">
-                            <h2>1.The dynamics of the blocks.</h2>
-                            <p>The DNA blocks are connected with each other and gradually form large scale intermediates by DNA stacking, then eventually enlarge up to the expected size. In order to confirm the process of building the architecture, we formalized a simulation model with ordinary differential equations based on chemical kinetics. By running the simulation with Scilab, we obtained the time series graphs of concentrations of stacked blocks including the intermediates.  The following URL shows the source code and all the intermediates.</p>
+                            <h2>1.Dynamics </h2>
+                        <p>The DNA blocks are connected with each other and gradually form large scale intermediates by DNA stacking, then eventually enlarge up to the expected size. In order to confirm the process of building the architecture, we formalized a simulation model with ordinary differential equations based on chemical kinetics. By running the simulation with Scilab, we obtained the time series graphs of concentrations of stacked blocks including the intermediates.  <a href="./assets/intermediates.pdf" class="linkfile">The list</a>  
+                           and <a href="./assets/sourcecode.txt" class="linkfile">the source code</a> shows the source code and all the intermediates.file</p>
+                            
                         <figure id="fig3-1">
                             <img src="./assets/graph3-1.png" >
-                            <figcaption>Fig.3-1</figcaption>
+                            <figcaption>Fig.3-1 (A)Time-dependent concentration plot of closed block and the input <br>(B)Time-dependent concentration plot of origami architecture </figcaption>
                         </figure>
                         <p>When the input strand was added at 0 [s], the concentration of the input and the monomer block rapidly decreased and gradually converged to 0 [nM] and 10 [µmol/L], respectively (Fig.3-1A). This reflects the reaction
 that the monomer block reacted with the input strand.
-On the other hand, the concentration of origami architecture increased swiftly (Fig.3-1B). It finally reached about 0.44 [nM]. The concentration of architecture became the half concentration of the equilibrium state after 50 [s]. This indicates that DNA blocks are rapidly connected with each other and build up to the final expected size.</p>
+On the other hand, the concentration of origami architecture increased swiftly (Fig.3-1B). It finally reached about 0.44 [nM]. The concentration of architecture became the half concentration of the equilibrium state after 50 [s]. This indicates that DNA blocks were rapidly connected with each other and build up to the final expected size.</p>
                     </div>
                     <div class="section-container">
                         <h2>2.Gibbs free energy and the concentration</h2>
@@ -248,7 +250,7 @@ On the other hand, the concentration of origami architecture increased swiftly (
                         
                         <figure id="fig3-2">
                             <img src="./assets/graph3-2.png" >
-                            <figcaption>Fig.3-2</figcaption>
+                            <figcaption>Fig.3-2 Concentration of origami architecture obtained from Gibbs free energy</figcaption>
                         </figure>
                    <p>Then we regard the free energy difference as a variable and carried out simulations for each value to understand the relation between the free energy and the yield of the architecture (Fig 3-2). Each plot corresponds to the concentrations of the architecture at 1200[s] after reaction starts under given free energy. When the free energy difference was small, the concentration of the architecture increased. Note that free energy difference is a negative value. A smaller value represents a more stable architecture. To improve the yield of origami architecture, we need to minimize the free energy difference obtained by the stacking of DNA blocks.
 </p>
@@ -273,7 +275,7 @@ On the other hand, the concentration of origami architecture increased swiftly (
 
                         <figure id="fig4-1">
                             <img src="./assets/Fig.4-1.png" width="400px">
-                            <figcaption>Fig.4-1</figcaption>
+                            <figcaption>Fig.4-1 Origami preparing process</figcaption>
                         </figure>
 
                     </div>
@@ -287,7 +289,7 @@ On the other hand, the concentration of origami architecture increased swiftly (
 
                         <figure id="fig4-2">
                             <img src="./assets/Fig.4-2_open-close.png">
-                            <figcaption>Fig.4-2</figcaption>
+                            <figcaption>Fig.4-2 Monomer block preparing process</figcaption>
                         </figure>
 
                     </div>
@@ -300,7 +302,7 @@ On the other hand, the concentration of origami architecture increased swiftly (
 
                         <figure id="fig4-3">
                             <img src="./assets/Fig.4-3assemble2.png" width="800px">
-                            <figcaption>Fig.4-3</figcaption>
+                            <figcaption>Fig.4-3 Low concentration of the input causes assembly of open and closed blocks</figcaption>
                         </figure>
 
                     </div>
@@ -317,17 +319,17 @@ On the other hand, the concentration of origami architecture increased swiftly (
 
                         <figure id="fig4-4">
                             <img src="./assets/Fig.4-4.png" width="400px">
-                            <figcaption>Fig.4-4</figcaption>
+                            <figcaption>Fig.4-4 Design of T-motif monomer and the final structure</figcaption>
                         </figure>
                         
                         <p>The results of electrophoresis and AFM image show that we succeeded in forming DNA rings (Fig.4-5).</p>
                         <figure id="fig4-5A">
                             <img src="./assets/図3.png" width="400px">
-                            <figcaption>Fig.4-5A</figcaption>
+                            <figcaption>Fig.4-5A Lane 1 is for Ring+, lane 2 is for Ring－, lane 3 is for Ring+ and Ring－</figcaption>
                         </figure>
                         <figure id="fig4-5B">
                             <img src="./assets/図4.png" width="400px">
-                            <figcaption>Fig.4-5B</figcaption>
+                            <figcaption>Fig.4-5B White arrows indicate the DNA rings</figcaption>
                         </figure>
 
                     </div>
@@ -345,14 +347,14 @@ On the other hand, the concentration of origami architecture increased swiftly (
                         
   		<figure id="table1">
           <img src="./assets/table改.png" width="600px">
-                    <figcaption>Table 5-1</figcaption>
+                    <figcaption>Table 5-1 Comparison with other approaches</figcaption>
                         </figure>
                         
                         <h2>Significance</h2>
-                          The entire biological world can be regarded as a huge hierarchical system composed of homogeneous and heterogeneous layers [4]. The homogeneous layer is able to form the heterogeneous layer with many homogeneous components of various sizes and complexities, such as cells form various tissues and organs.<p>
+                          The entire biological world can be regarded as a huge hierarchical system composed of homogeneous and heterogeneous layers [8]. The homogeneous layer is able to form the heterogeneous layer with many homogeneous components of various sizes and complexities, such as cells form various tissues and organs.<p>
                           	<figure id="fig5-1">
-          <img src="./assets/fig1-discuss.png" width="400px">
-                    <figcaption>Fig.5-1</figcaption>
+          <img src="./assets/Fig.5-1.png" width="400px">
+                    <figcaption>Fig.5-1 Future of our project</figcaption>
                         </figure>
                           
                        Inspired by this self-organizing hierarchy, we propose a novel method to make DNA nano structures with designated size using homogeneous monomers. The method proposed here enables us to make large-scale complex nanostructures. By adjusting the length/width ratio of the blocks we designed, beams with various length and boards with various areas can be manufactured, which can be used to build complex micro-scale structures. Furthermore, if we combine the blocks with DNA computing devices and molecular motor, molecular computers and molecular robots can be made. And if we put various kinds of cells into the structures made of the designed blocks, biological application like artificial organs could be anticipated (Fig.5-1).
@@ -380,7 +382,7 @@ On the other hand, the concentration of origami architecture increased swiftly (
                         <h3 class="grade">Junior</h3>
                         <p>Yuma Endo, Takeo Uchida, Keita Abe, Shosei Ichiseki, Satoru Akita, Shiyun Liu</p>
                         <h3 class="grade">Senior</h3>
-                        <p>Eiki Ishihara, Shunsuke Imai, Hayato Otaka, Yuto Otaki, Kenta Suzuki, Taiki Watanabe, Yoriko Hashida</p>
+                        <p>Eiki Ishihara, Shunsuke Imai, Hayato Otaka, Yuto Otaki, Kenta Suzuki, Taiki Watanabe, Yoriko Hashida, Thanapop Rodjanapanyakul</p>
                         <h3 class="grade">Supervisor</h3>
                         <p>Ryo Kageyama, Koichiro katayama, Takahiro Tomaru, Takuto Hosoya, Hiroyuki Fujino, Masahiro Endo, Satoru Yoshizawa, Koichi Kurashima, Masaru Tsuzawa, Tomoyuki Hirano, Kazuki Hirahara, Yusuke Sato, Wataru Tobita, Keitel Cervantes-Salguero, Akira Saito</p>
                         <h3 class="grade">Mentor</h3>
@@ -404,20 +406,31 @@ On the other hand, the concentration of origami architecture increased swiftly (
                 <div class="section" >                    
                     <div class="section-container references">
                         <h2>References</h2>
-                        [1] Rothemund, Paul WK. "Folding DNA to create nanoscale shapes and patterns."Nature 440.7082 (2006): 297-302.<p>
+                        <p>[1] Rothemund, Paul WK. "Folding DNA to create nanoscale shapes and patterns."Nature 440.7082 (2006): 297-302.</p>
 
+<p>
 [2] Gerling, Thomas,Klaus F. Wagenbauer,　Andrea M. Neuner, and Hendrik Dietz
- . "Dynamic DNA devices and assemblies formed by shape-complementary, non?base pairing 3D components." Science 347.6229 (2015): 1446-1452.<p>
+ . "Dynamic DNA devices and assemblies formed by shape-complementary, non?base pairing 3D components." Science 347.6229 (2015): 1446-1452.</p>
 
-[3] Hamada, Shogo, and Murata, Satoshi. "Substrate‐Assisted Assembly of Interconnected Single‐Duplex DNA Nanostructures." Angewandte Chemie121.37 (2009): 6952-6955.<p>
 
-[4] Rothemund, Paul WK, Nick Papadakis, and Erik Winfree. "Algorithmic self-assembly of DNA Sierpinski triangles." PLoS biology 2.12 (2004): e424.<p>
+<p>[3]S. M. Douglas et al., Rapid prototyping of 3D DNA-origami shapes with caDNAno. Nucleic Acids Res. 37, 5001 (2009)
+</p>
 
-[5] Pistol, Constantin, and Chris Dwyer. "Scalable, low-cost, hierarchical assembly of programmable DNA nanostructures." Nanotechnology 18.12 (2007): 125305.<p>
+<p>
+[4] Hamada, Shogo, and Murata, Satoshi. "Substrate‐Assisted Assembly of Interconnected Single‐Duplex DNA Nanostructures." Angewandte Chemie121.37 (2009): 6952-6955.</p>
 
-[6] Rothemund, Paul WK, and Erik Winfree. "The program-size complexity of self-assembled squares." Proceedings of the thirty-second annual ACM symposium on Theory of computing. ACM, 2000.<p>
 
-[7] Murata, Satoshi, and Kurokawa Haruhisa. Self-organizing robots. Vol. 77. Springer, 2012.<p>
+<p>
+[5] Rothemund, Paul WK, Nick Papadakis, and Erik Winfree. "Algorithmic self-assembly of DNA Sierpinski triangles." PLoS biology 2.12 (2004): e424.</p>
+
+<p>
+[6] Pistol, Constantin, and Chris Dwyer. "Scalable, low-cost, hierarchical assembly of programmable DNA nanostructures." Nanotechnology 18.12 (2007): 125305.</p>
+
+<p>
+[7] Rothemund, Paul WK, and Erik Winfree. "The program-size complexity of self-assembled squares." Proceedings of the thirty-second annual ACM symposium on Theory of computing. ACM, 2000.</p>
+
+<p>
+    [8] Murata, Satoshi, and Kurokawa Haruhisa. Self-organizing robots. Vol. 77. Springer, 2012.</p>
                         
 
                     </div>
