@@ -225,16 +225,16 @@ a{
 .flowchart{
     width: 100%;
     height: 180px;
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
     
-    
-    background-image:url(./experiment_flowchart.svg);
-    background-size:contain;
-    background-position: center;
-    background-repeat: no-repeat;
+
 }
 
+.flowchart img{
+    width: 100%;
+    height: auto;
+}
 .content-title {
     margin-bottom: 40px;
     text-align: center;
