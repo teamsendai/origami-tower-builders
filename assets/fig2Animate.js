@@ -27,6 +27,19 @@
         //カーソル座標
         var pX=0;
         var pY=0;
+
+
+
+        //プレロード
+        img_array = [];
+        for (var i = 1; i <= 240; i++){
+            img_array.push('./assets/seq' + i + '.gif');
+        }
+        pl_file = new Array();
+        for (i=0; i<img_array.length; i++){
+            pl_file[i] = new Image();
+            pl_file[i].src=img_array[i];
+        }
         
         
         
