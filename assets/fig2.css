@@ -1,0 +1,61 @@
+#fig2container{
+position:relative;
+width: 400px;
+height: 300px;
+    margin: 0 auto;
+}
+#dragarea{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 400px;
+    height: 300px;
+    cursor: move;
+    z-index: 2;
+}    
+#stage{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    height: 300px;
+    z-index: 1;
+
+}
+
+.button {
+    position: absolute;
+    top: 20px;
+    right: -60px;
+    display: block;
+    color: #333333;
+    width: 60px;
+    height: 60px;
+    line-height: 55px;/* 不明 */
+    background-color: #e5e5e5;
+    text-align: center;
+    font-size: 18px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    /*border: transparent 1px solid;*/
+    border: solid 1px #64a9c3;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #d9d8d8;
+    border: solid 1px #999999;
+
+    -moz-transition: all 0.5s; 
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+}
+
+.button:active {
+    background-color: #1e9bf7;
+    -moz-transition: all 0s; 
+    -webkit-transition: all 0s;
+    -o-transition: all 0s;
+    -ms-transition: all 0s;
+}    
