@@ -39,6 +39,8 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="./lib/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" href="./assets/common.css">
+    <script type="text/javascript" src="./assets/fig2Animate.js"></script>
+    <link rel="stylesheet" href="./assets/fig2.css">
 </head>
 
 <body>
@@ -168,6 +170,41 @@
                             <img src="./assets/fig-1.png" width="400px">
                             <figcaption>Fig.1</figcaption>
                         </figure>
+                        
+                        
+                        <figure id="fig-2A">
+                            <!-- Figure2 --------------------------------------------------- -->     
+                             <!-- 描画領域 -->
+                            <div id="fig2container">
+                                <div id="dragarea" onMouseDown="dragTrigger()">
+                                </div>
+                                <div id="stage">
+                                     <img id="frame" src="./assets/seq/0001.png">
+                                </div>
+                                    <!-- 開閉ボタン -->
+                            <a class="button" id="fig2Button" onClick="clickOpenButton()">open</a>
+                            </div>
+
+
+
+
+                            <!-- デバッグ用の情報表示 -->
+                            <div id="statusview" hidden>   
+                               <input type="button" value="toggleDisplayMode" onClick="toggleDisplayMode()">
+                                <p>pX: <span id="pos"></span></p>
+                                <p>dX: <span id="dX"></span></p>
+                                <p>currentFrame: <span id="currentf"></span></p>
+                                <p>src: <span id="source"></span></p>
+                                <p>drag: <span id ="drag"></span></p>
+                                <p>displayMode: <span id ="showDisplayMode"></span></p>
+                                <p>blockOpened: <span id ="showBlockOpened"></span></p>
+                            </div>
+                            <figcaption>Fig.2A</figcaption>
+                        
+                        </figure>
+                        
+                        
+                        
             <p>We have known that DNA origami blocks with shape-complementary interfaces can stack together [2]. The blocks we designed have protrusions on obverse surface (Surface A) and recessions on reverse surface (Surface B). Moreover, nucleobase stacking interactions engage at the double-helical interfaces of the shape-complementary protrusions and recessions when the two domains are brought into contact, but only upon correct fit of helices and given correct helical orientation of the interfacial nucleobase pairs. Therefore, only Surface A of Shape C and Surface B of Shape O has the ability to stack with each other (Fig.3).
 </p>
                     <figure id="fig-3">
