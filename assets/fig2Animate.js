@@ -34,13 +34,13 @@
         var arrayOfRotationClose = [];
         for (var i = 181; i <= 240; i++) {
             var j = ("000" + i).substr(-4);
-            arrayOfRotationClose.unshift('./assets/seq/' + j + '.png');
+            arrayOfRotationClose.unshift('./assets/seq/' + j + '.gif');
         }
         
         var arrayOfRotationOpen = [];
         for (var i = 121; i <= 180; i++) {
             var j = ("000" + i).substr(-4);
-            arrayOfRotationOpen.unshift('./assets/seq/' + j + '.png');
+            arrayOfRotationOpen.unshift('./assets/seq/' + j + '.gif');
         }
         
         
@@ -48,14 +48,14 @@
         var arrayOfTransitionFront = [];
         for (var i = 1; i <= 60; i++) {
             var j = ("000" + i).substr(-4);
-            arrayOfTransitionFront.push('./assets/seq/' + j + '.png');
+            arrayOfTransitionFront.push('./assets/seq/' + j + '.gif');
         }
         
         //閉じる->開く
         var arrayOfTransitionBack = [];
         for (var i = 61; i <= 120; i++) {
             var j = ("000" + i).substr(-4);
-            arrayOfTransitionBack.push('./assets/seq/' + j + '.png');
+            arrayOfTransitionBack.push('./assets/seq/' + j + '.gif');
         }
         
         
