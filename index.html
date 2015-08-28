@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- //TODO: figure3色の改善とカメラワーク -->
+<!-- // TODO: li>a位置3pxのズレを治す  -->
+<!-- // TODO: hogefugaをなおす  -->
+<!-- // TODO: すなにうめる、すなをまぶす  -->
+<!-- // TODO: 建設途中  -->
+<!-- // TODO: いっぱい増やす  -->
+<!-- // TODO:ぜんぶ交互にシマシマは良くない  -->
+<!-- // TODO:津沢さんにきく!!テクスチャ  -->
+<!-- // TODO:フローチャートアウトライン化  -->
+<!-- // TODO:ページタイトルぎめ simulation->experiment?  -->
+<!-- // TODO:スクロール時自動再生、リプレイボタン  -->
+<!-- // TODO:スムーズスクロール  -->
+<!-- // TODO:構造見直し 、クラス名見直し  -->
+<!-- // TODO:experiment図  -->
+<!-- // TODO:自動再生 -->
+<!-- // TODO: 構文チェック  -->
+<!-- // TODO:ロゴ sのじクレーンで持ち上げる  -->
+<!-- // TODO: コメント削除 -->
+<!-- // TODO: 行間、色変更 -->
+<!-- // TODO: カラースキームに合わせて適当に決めていた色を再度アサイン -->
+<!-- // TODO: レスポンシブ対応 -->
+<!-- // TODO: ウインドウ最小時に行をはみ出す -->
+<!-- // TODO: リンク飛んだ時にheaderのぶんずれる -->
+<!-- // TODO: 文章は別管理するシステム -->
+<!-- // TODO: サブタイトル色 -->
+<!-- // TODO: DNA折り紙色 -->
+<!-- // TODO: 名称、カラースキーム,フォント共有 -->
+<!-- // TODO: inactive色ちょっと変える -->
+<!-- // TODO: design重複消す -->
+<!-- // TODO: figureのtext-align -->
+<!-- // TODO: experimentの図 -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Origami Tower Builders - TeamSendai 2015</title>
+    <link rel="stylesheet" href="./lib/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="./lib/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="./assets/common.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header">
+       
+        <!-- title logo--> 
+        <div id="title-logo">
+            <!-- //TODO: タイトルのboxがおかしい -->
+            <a href="./index.html"></a>
+        </div>
+           
+        <!-- global-navi -->
+        <div id="global-navi">
+                <ul>
+                    <li class="current"><a href="#content-01">Home</a></li>
+                    <li><a href="#content-02"><span>Project</span></a></li>
+                    <li><a href="#content-03">Design</a></li>
+                    <li><a href="#content-04">Simulation</a></li>
+                    <li><a href="#content-05">Team</a></li>
+                </ul>
+            </div>   
+    </div>
+    
+    
+    <div id="container">
+        <!-- content -->
+        <div id="content">
+           
+            <!-- Home -->
+            <div id="content-01">
+               
+                <!-- Hero image -->
+                <div id="hero-content">
+                    <div class="subtitle">How many stories would you like?</div>
+                </div>
+                
+                <!-- Abstract -->
+                <div class="section stripe-dark">
+                    <div class="section-container">
+                        <p>Our goal is to manufacture DNA nanostructures with desired size by using DNA origami technology. Shape-complementary interfaces on DNA origami enables us to stack DNA origami blocks to form a large-scale polymeric object, however, the number of stacking is still difficult to be controlled.</p> 
+                        <p>Here we show that through designing the configuration and arrangement on protrusions and recessions of DNA origami surface, the number of stacking origami monomers can be precisely controlled.</p>
+                        <p>We designed an origami which has an ability to transform its shape triggered by an input of single-stranded DNA. When we add the input, initial shape (Shape C) is changed into another shape with different width/height(Shape O).Owing to the shape- complementary interfaces, only the combination of Shape C and Shape O can stack with each other. Based on the principle of least common multiple, the stacking procedure continues until the width/height becomes identical. Moreover, by adjusting the width/height ratio between Shape C and Shape O, it is possible to realize DNA nanostructures with designated size made of one kind of monomers.</p>
+                        <p>We anticipate our design to be a starting point to make micro-scale DNA nanostructures. For example, the cytoskeleton for artificial cell, the body of molecular robots and the base of nano chemical factory could be manufactured. Furthermore, combining our method with DNA computing could provide a brand-new possibility for molecular robotics.</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Project -->
+            <div id="content-02">
+                <div class="section">
+                   
+                    <div class="content-title">
+                        <h1>Project</h1>
+                    </div>
+                    
+                    <div class="section-container">
+                        <h2>Background and Motivation</h2>
+                        <p> The entire biological world can be regarded as a huge hierarchical system composed of homogeneous and heterogeneous layers. For example, proteins, which are made up of only 20 kinds of amino acids, can form complicated structures with diverse functions by folding and assembling themselves in a controllable way. And they are one of the basic components of organelles and cells which are at a totally different scale. Inspired by this self-organizing hierarchy, we considered manufacturing DNA Nano structures with designated size.</p>
+                    </div>
+                </div>
+                <div class="section stripe-green">
+                    <div class="section-container">
+                        <h2>Purpose</h2>
+                        <p>The purpose of our project is to create structures with designated size by stacking only one kind of DNA origami blocks in a controllable way. DNA origami technology enables us to make various nanoscale structures on the basis of shape-complementary interfaces. However, the maximum size of DNA origami is about 100 nm due to the length restriction of the scaffold, and the number of stacking among them cannot be controlled. By conventional approach, to create structures by stacking N DNA origami blocks (N = 2, 3 …), we need N-kind of origami with different connectors, which would make it difficult to design the blocks properly.</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-container">
+                        <h2>Idea</h2>
+                        <p> To achieve the purpose, we proposed a new method to control the number of stacking origami blocks. In this method, a shape-complementary interface with arrangement of the orientation of protrusions and recessions on both sides is designed. By adjusting the length/width ratio of the origami blocks, the stacking procedure could stop at a specified height in accordance with the principle of least common multiple. Furthermore, the origami blocks have abilities to transform from closed state to open state, providing the possibility to use only one kind of blocks to build polymeric origami blocks like a tower and avoid the improper stacking effectively.</p>
+                    </div>
+                </div>
+                <div class="section stripe-green">
+                    <div class="section-container">
+                        <h2>Procedure</h2>
+                        We realize the goal by 3 steps.
+                        <div>
+                            <h3>Step1: Design</h3>
+                            <ol>
+                                <li>The shape-complementary interface of DNA origami blocks is designed by caDNAno2, its thermodynamic stability is simulated by CanDo and its property of molecular dynamics is simulated by oxDNA.</li>
+                                <li>The opening/closing mechanism to control the activation of the origami block is designed by Sequence Design, and then use NUPACK to confirm the desired strand displacement reaction.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h3>Step2: Simulation</h3>
+                            <ol>
+                                <li>Formalize a mathematical model for stacking reactions by reaction kinetics.</li>
+                                <li>Predict the behavior of the model by Scilab.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h3>Step3: Experiment</h3>
+                            <ol>
+                                <li>Origami preparation: make DNA origami with strands of opening/closing mechanism</li>
+                                <li>Poly-Agarose Gel Electrophoresis: Verify the behavior of opening/closing mechanism.</li>
+                                <li>Observation by Atomic Force Microscope: Verify the shape of DNA origami blocks, the transformation from open state to closed state, and the stacking procedure.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-container">
+                        <h2>Future</h2>
+                        <p> Our mechanism enables us to make micro-scale DNA Nano structures. For example, the cytoskeleton for artificial cell, the body of molecular robots, molecular computers, and the base of Nano chemical factory could be manufactured.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Design -->
+            <div id="content-03">
+                <div class="section stripe-green" id="design">
+                    <div class="content-title">
+                        <h1>Design</h1>
+                    </div>
+
+                    <div class="section-container">
+                        <p>We considered building a tower by using only one kind of DNA origami block (Fig 1). Herein, we designed the origami block by caDNAno2. It is composed of two parts, Block 1 and Block 2. The hinge-joint between Block 1 and Block 2 enables the origami to possess of two different closed state (Shape C) and open state (Shape O) (Fig.2A-2C).</p>
+
+                        <figure id="fig-1">
+                            <img src="./assets/fig-1.png" width="400px">
+                            <figcaption>Fig.1</figcaption>
+                        </figure>
+            <p>We have known that DNA origami blocks with shape-complementary interfaces can stack together. The blocks we designed have protrusions on obverse surface (Surface A) and recessions on reverse surface (Surface B). Moreover, nucleobase stacking interactions engage at the double-helical interfaces of the shape-complementary protrusions and recessions when the two domains are brought into contact, but only upon correct fit of helices and given correct helical orientation of the interfacial nucleobase pairs. Therefore, only Surface A of Shape C and Surface B of Shape O has the ability to stack with each other (Fig.3).</p>
+                    <figure id="fig-3">
+                        <video src="./assets/fig-3.mp4" width="300px" ></video>
+                        <figcaption>Fig.3</figcaption>
+                    </figure>
+            
+            <p>We also designed an opening/closing mechanism to realize the transformation from Shape C to Shape O. In Fig. 4, we graft some single-stranded DNAs to the origami blocks. When we add the initial input of a single-stranded DNA, which has the complementary sequences to the ones grafted to the blocks, Shape C transforms into Shape O due to the strand displacement reaction. Once the block becomes open state, it has the ability to activate the next closed block.</p>
+            <p>We controlled the height of the tower, namely the number of stacking blocks, according to the principle of least common multiple (Fig.5). For example, if we intend to build a 6-story tower, we prepare an origami block which has two pairs of protrusions on Surface A and three pairs of recessions on Surface B. Through the opening/closing mechanism mentioned above, we could realize the situation where there are two closed blocks and three open blocks and the stacking procedure would stop when all the six pairs of protrusions and recessions combined with each other. Generally, we could build polymeric blocks with any designated height by changing the length-width ratio of the monomer blocks.
+        </p>
+
+                      <figure id="fig-5">
+                        <video src="./assets/fig-5.mp4" width="300px" ></video>
+                        <figcaption>Fig.5</figcaption>
+                      </figure>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Simulation -->
+            <div id="content-04">
+                 <div class="section stripe-green" id="simulation">
+                    <div class="section-container">
+                        <div class="section-container">
+                        <h1>Simulation</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                   <div class="flowchart">
+
+                   </div>
+
+
+                </div>
+
+                <div class="section stripe-green">
+                    <div class="section-container">
+                        <h1>Discussion</h1>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-container">
+                        <h1>Materials<span style=" font-weight: 400; font-size: 0.8em" >&amp;</span>Methods</h1>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team -->
+            <div id="content-05">
+                <div class="section stripe-green" id="team">
+                    <div class="content-title">
+                        <h1>Team</h1>
+                    </div>
+                    <div class="section-container">
+                        <h2>Members</h2>
+                        <h3 class="grade">Freshman</h3>
+                        <p>Taiyo Kikkawa, Masataka Saito, Akihiko Fukuchi</p>
+                        <h3 class="grade">Sophomore</h3>
+                        <p>Sho Aradachi, Yuya Onodera</p>
+                        <h3 class="grade">Junior</h3>
+                        <p>Yuma Endo, Takeo Uchida, Keita Abe, Shosei Ichiseki, Satoru Akita, Shiyun Liu</p>
+                        <h3 class="grade">Senior</h3>
+                        <p>Eiki Ishihara, Shunsuke Imai, Hayato Otaka, Yuto Otaki, Kenta Suzuki, Taiki Watanabe, Yoriko Hashida</p>
+                        <h3 class="grade">Supervisor</h3>
+                        <p>Ryo Kageyama, Koichiro katayama, Takahiro Tomaru, Takuto Hosoya, Hiroyuki Fujino, Masahiro Endo, Satoru Yoshizawa, Koichi Kurashima, Masaru Tsuzawa, Tomoyuki Hirano, Kazuki Hirahara, Yusuke Sato, Wataru Tobita, Keitel Cervantes-Salguero, Akira Saito</p>
+                        <h3 class="grade">Mentor</h3>
+                        <p>Satoshi Murata, Shin-ichiro M.Nomura, Ibuki Kawamata</p>
+
+                    </div>
+                </div>
+
+                <div class="section" hidden>
+                    <div class="section-container">
+                        <h2>Sponsors</h2>
+                        <img src="./assets/temp/sponsors_nts.png" alt="">
+                        <img src="./assets/temp/sponsors_tsukuba.png" alt="">
+                        <img src="./assets/temp/sponsors_sakata.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="section">                    
+                    <div class="section-container references">
+                        <h2>References</h2>
+                        <h3>1. Project</h3>
+                        [1] K. Komiya, M. Takinoue, F. tanaka, S. Hamada, S. Murata,<em>DNA nanoengineering</em> (2011) 142-144
+                        <h3>2. design</h3>
+                        [1] T. gerling, K.F. Wagenbauer, A.M. Neuner, H. Dietz, <em>SCIENCE</em> <b>347</b> 1446-1452
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- footer -->
+        <div id="footer">
+            <div class="footer-wrapper">Copyright &copy; 2015 Team Sendai All Rights Reserved. </div>
+        </div>
+    </div>
+    
+    
+    <script>
+        $(function(){
+            // smooth-scroll
+            // http://kyasper.com/jquery-tips/
+            $('a[href^=#]').click(function(){
+                var speed = 400;
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html': href);
+                var position = target.offset().top - 100;
+                //header100px分offset
+                $('body,html').animate({scrollTop:position}, speed, 'swing');
+                return false;
+            });    
+        });
+    
+        
+    </script>
+</body>
+</html>
